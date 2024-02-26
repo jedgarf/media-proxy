@@ -1,2 +1,2 @@
-import { start } from "../dist/server.js";
-export default start;
+import app from "../dist/server.js";
+export default app;
