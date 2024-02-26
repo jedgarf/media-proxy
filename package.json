@@ -26,14 +26,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Eltik/image-proxy.git"
+        "url": "git+https://github.com/jedgarf/media-proxy.git"
     },
     "author": "eltik",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Eltik/image-proxy/issues"
+        "url": "https://github.com/jedgarf/media-proxy/issues"
     },
-    "homepage": "https://github.com/Eltik/image-proxy#readme",
+    "homepage": "https://github.com/jedgarf/media-proxy#readme",
     "dependencies": {
         "axios": "^0.27.2",
         "body-parser": "^1.20.2",
