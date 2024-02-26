@@ -1,1 +1,2 @@
-export declare const start: () => Promise<void>;
+declare const app: any;
+export default app;

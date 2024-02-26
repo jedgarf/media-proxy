@@ -60,14 +60,12 @@ app.get("/image-proxy", async (request, reply) => {
     return await new ImageProxy().proxyImage(request, reply);
 });
 
-export const start = async () => {
-    app.listen({ port: port }, function (err, address) {
-        if (err) {
-            process.exit(1);
-        }
+app.listen({ port: port }, function (err, address) {
+    if (err) {
+        process.exit(1);
+    }
 
-        console.log(colors.blue(`Server is now listening on ${port}`));
-    });
-};
+    console.log(colors.blue(`Server is now listening on ${port}`));
+});
 
-start();
+export default app;

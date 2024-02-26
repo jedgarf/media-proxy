@@ -3,7 +3,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.start = void 0;
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const express_1 = __importDefault(require("express"));
@@ -55,13 +54,10 @@ app.get("/", async (request, reply) => {
 app.get("/image-proxy", async (request, reply) => {
     return await new imageProxy_1.default().proxyImage(request, reply);
 });
-const start = async () => {
-    app.listen({ port: port }, function (err, address) {
-        if (err) {
-            process.exit(1);
-        }
-        console.log(colors_1.default.blue(`Server is now listening on ${port}`));
-    });
-};
-exports.start = start;
-(0, exports.start)();
+app.listen({ port: port }, function (err, address) {
+    if (err) {
+        process.exit(1);
+    }
+    console.log(colors_1.default.blue(`Server is now listening on ${port}`));
+});
+exports.default = app;

@@ -13,7 +13,6 @@
     "description": "Basic JavaScript image proxy.",
     "version": "1.0.0",
     "source": "src/server.ts",
-    "type": "module",
     "scripts": {
         "dev": "ts-node -r tsconfig-paths/register src/index.ts",
         "start": "node ./dist/server.js",
